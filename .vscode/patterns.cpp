@@ -443,14 +443,31 @@ void pattern22(){
     }
 
 }
+void pattern23(){
+    int n;
+    cout<<"Enter the no. of lines"<<endl;
+    cin>>n;
+        int size = 2 * n - 1;
 
+        for(int i = 0; i < size; i++) {
+            for(int j = 0; j < size; j++) {
+
+                int distance = min(min(i, j), 
+                 min(size - 1 - i, size - 1 - j));
+
+                cout << n - distance << " ";
+            }
+
+            cout << endl;
+      } 
+}
  
 
 int main(){
    
 
    //pattern1();
-   // pattern2();
+    //pattern2();
    //pattern3();
    //pattern4();
    //pattern5();
@@ -472,6 +489,8 @@ int main(){
    //pattern20();
    //pattern21();
    //pattern22();
+    pattern23();
+
 
     return 0;
 }
